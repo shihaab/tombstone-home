@@ -1,0 +1,18 @@
+{
+    "name": "Tombstone",
+    "icons": [
+        {
+            "src": "https://shihaab.github.io/tombstone-home/favicons/android-chrome-192x192.png?v=PYE2vNergA",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://shihaab.github.io/tombstone-home/favicons/android-chrome-512x512.png?v=PYE2vNergA",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2ecc71",
+    "background_color": "#2ecc71",
+    "display": "standalone"
+}
