@@ -1582,3 +1582,18 @@
   top:-0.14em;
   left:10px;
 }
+.tbs-red {
+	color: #e74c3c!important;
+}
+.tbs-green {
+	color: #2ecc71!important;
+}
+.tbs-blue {
+	color: #3498db!important;
+}
+.tbs-dark {
+	color: #34495e!important;
+}
+.tbs-yellow {
+	color: #f1c40f!important;
+}
