@@ -203,8 +203,8 @@ a:hover { text-decoration: none }
 </style>
 </head>
 <?php
-include 'Modules/Configuratie.php';
-include 'Modules/functies.php';
+include '../Modules/Configuratie.php';
+include '../Modules/functies.php';
 ConnectDB();
 
 //init fields
