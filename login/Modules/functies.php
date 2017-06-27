@@ -57,7 +57,20 @@ function is_minlength($Invoer, $MinLengte)
 function is_Username_Unique($Invoer,$pdo)
 {
     $parameters = array(':Username'=>$Invoer);
-    $sth = $pdo->prepare('SELECT KlantID FROM members WHERE Inlognaam = :Username LIMIT 1');
+    $sth = $pdo->prepare('SELECT memberid FROM members WHERE username = :Username LIMIT 1');
+
+    $sth->execute($parameters);
+
+    // controleren of de username voorkomt in de DB
+    if ($sth->rowCount() == 1)
+        return false;//username komt voor
+    else
+        return true;//username komt niet voor
+}
+function is_email_Unique($Invoer,$pdo)
+{
+    $parameters = array(':Username'=>$Invoer);
+    $sth = $pdo->prepare('SELECT memberid FROM members WHERE email = :Username LIMIT 1');
 
     $sth->execute($parameters);
 
