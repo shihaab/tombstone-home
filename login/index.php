@@ -64,7 +64,7 @@ $pdo = ConnectDB();
 		if ($check){
 			header('Refresh:5;url=https://tombstone-squad.com');
 			echo '<h1 class="text-center" style="margin-top:50px;color:white;">Login successfull</h1>';
-			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div>';
+			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div><div class="footer-text container text-center"><p>If this takes longer than 5 seconds, please click this link: <a href="https://tombstone-squad.com">LINK</a></p></div>';
         }
         else{
 			header('Refresh:5;url=https://tombstone-squad.com');
