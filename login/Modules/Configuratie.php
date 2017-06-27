@@ -1,6 +1,6 @@
 <?php
 
-define("HOST", "localhost");
-define("DBNAME", "cinema7");
-define("USERNAME", "root");
-define("PASSWORD", "");
+define("HOST", "rdbms.strato.de");
+define("DBNAME", "DB3017198");
+define("USERNAME", "U3017198");
+define("PASSWORD", "98wachtwoordDB");
