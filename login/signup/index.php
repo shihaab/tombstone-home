@@ -13,11 +13,8 @@
 <?php
 include '../Modules/Configuratie.php';
 include '../Modules/functies.php';
-<<<<<<< HEAD
+
 $pdo = ConnectDB();
-=======
-ConnectDB();
->>>>>>> 003bff3935ada2dde6551a82cfe34ec3c5c11dad
 
 //init fields
 $Email = $Username = $Password = $RetypePassword = NULL;
