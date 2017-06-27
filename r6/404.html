@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JaMmeD 404 n0t f0und</title>
+<style>
+	.hero {
+  min-height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background: url(https://www.tombstone-squad.com/images/mute.gif);
+  background-size: cover;
+}
+body {
+  margin: 0px;
+  color: #585E62;
+  font-family: Arial;
+}
+h1 {
+  padding: 10px;
+  margin: 20px 30px 5px 30px;
+  font-size: 40px;
+}
+h2 {
+  padding: 10px;
+  margin: 0px 30px;
+  font-size: 25px;
+}
+p {
+  padding: 10px;
+  margin: 0px 30px;
+  font-size: 15px;
+}
+a {
+  color : #4466FF;
+  text-decoration: none;
+}	
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function randomInt(i,t){return Math.floor(Math.random()*(t-i+1)+i)}function glitch(){this.init=function(){for(page_content=$("glitch").html(),$("body").css("overflow-x","hidden"),linecount=0,this.glitchlines=[];linecount<glitch_lines;)$("body").append('<div class="glitch-line-'+linecount+'">'+page_content+"</div>"),$(".glitch-line-"+linecount).css({height:"100%",width:"100%",position:"absolute",top:"0",left:"0"}).hide(),this.glitchline(".glitch-line-"+linecount,linecount),linecount++;$("body").append('<div class="glitch-div-1">'+page_content+"</div>"),$("body").append('<div class="glitch-div-2">'+page_content+"</div>"),$(".glitch-div-1, .glitch-div-2").css({height:"100%",width:"100%",position:"absolute",top:"0",left:"0"}),this.glitchmove()},this.glitchline=function(i,t){this.glitchlines[t]=new glitchline,this.glitchlines[t].start(i)},this.glitchmove=function(){(glitchmove=new glitchmove).start()}}function glitchmove(){this.start=function(){selfmove=this,setInterval(function(){setTimeout(function(){selfmove.move()},randomInt(glitch_move_wait_min,glitch_move_wait_max))},randomInt(glitch_move_timer_min,glitch_move_timer_max))},this.move=function(){$(".glitch-div-1").css({left:randomInt(glitch_move_amount_min,glitch_move_amount_max)+"px",top:randomInt(glitch_move_amount_min,glitch_move_amount_max)+"px",opacity:glitch_move_opacity,color:glitch_move_color_1}),$(".glitch-div-2").css({left:randomInt(glitch_move_amount_min,glitch_move_amount_max)+"px",top:randomInt(glitch_move_amount_min,glitch_move_amount_max)+"px",opacity:glitch_move_opacity,color:glitch_move_color_2}),this.moveback()},this.moveback=function(){this.timeout=setTimeout(function(){$(".glitch-div-1, .glitch-div-2").css({left:"0px",top:"0px",color:glitch_move_original_color,opacity:"1"})},randomInt(glitch_move_duration_min,glitch_move_duration_max))}}function glitchline(){this.start=function(i){selfline=this,this.timeouts=[],setInterval(function(){setTimeout(function(){selfline.add(i)},randomInt(glitch_line_wait_min,glitch_line_wait_max))},randomInt(glitch_line_timer_min,glitch_line_timer_max))},this.add=function(i){$(i).css({height:randomInt(glitch_line_height_min,glitch_line_height_max)+"px",width:randomInt($(window).width()/2,$(window).width())+"px",top:randomInt(0,$(window).height())+"px",left:randomInt(0,$(window).width()/2)+"px",position:"fixed",overflow:"hidden",display:"block",background:"#FFF"}),$(i).scrollTop(randomInt(0,$(window).height())),$(i).scrollLeft(randomInt(0,100)),this.remove(i)},this.remove=function(i){this.timeouts[i]=setTimeout(function(){$(i).hide()},randomInt(glitch_line_duration_min,glitch_line_duration_max))}}var glitch_lines=15,glitch_line_duration_min=100,glitch_line_duration_max=500,glitch_line_timer_min=100,glitch_line_timer_max=5e3,glitch_line_wait_min=100,glitch_line_wait_max=3e3,glitch_line_height_min=5,glitch_line_height_max=50,glitch_move_color_1="#08FFF2",glitch_move_color_2="#FC0DFF",glitch_move_original_color="#585E62",glitch_move_opacity=.2,glitch_move_duration_min=1e3,glitch_move_duration_max=300,glitch_move_timer_min=500,glitch_move_timer_max=1500,glitch_move_wait_min=1e3,glitch_move_wait_max=2e3,glitch_move_amount_min=-10,glitch_move_amount_max=10,glitch_autostart=1;window.onload=function(){glitch_autostart&&(glitch=new glitch).init()};
+</script>
+</head>
+
+<body>
+<glitch>
+  <div class="hero">
+  </div>
+  <h1>404?!</h1>
+	  <h2>"Deploying Jammer!" &hellip;</h2>
+  	<p>
+      Dammit Mute! Ohh hello there?! We're not sure how he got here, but you should head <a href="http://r6.tombstone-squad.com/">home</a>. </p>
+   <p>
+      It's probably our fault that you're here; but if you're having trouble with the site just shoot us an <a href="mailto:info@tombstone-squad.com">email</a>.
+   </p>
+  <!-- Extra spacing! -->
+  <br />
+  <br />
+  <br />
+  <br />
+  
+</glitch>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COMMAND ME</title>
+<style>
+	*{box-sizing:border-box}body,html{min-height:100%}body{background:linear-gradient(135deg,#593188,#2c318f);color:#c7c7d1;font:400 20px/1.625 "Source Sans Pro",sans-serif;padding:2em}.window{background:#2a2558;border-radius:.5em;box-shadow:0 .75em 3em #311a50;margin:2em auto;max-width:40em;min-height:20em;padding-right:4px;overflow:hidden;position:relative}.window::before{background:linear-gradient(#2a2558 38%,rgba(42,37,88,0));content:'';position:absolute;top:0;right:0;left:0;height:2em;z-index:100}.result{margin:0;padding:2em 2em 1em;height:16em;overflow-y:auto}.result li{display:block;animation:appear .5s ease-in-out forwards;opacity:0;transform:translateY(150%)}.path{color:#f76e85}.result li.ready{animation:none;font-style:italic;margin-top:-.5em;margin-bottom:.5em;transform:none;opacity:.5}@keyframes appear{100%{transform:none;opacity:1}}.result li:nth-child(odd){animation-delay:.75s;color:#3df5b8}.result::-webkit-scrollbar{width:10px}.result::-webkit-scrollbar-thumb{background:#36aa95;border-radius:10px}.command-area{background:#201840;color:#3df5b8;padding:1em;position:absolute;bottom:0;width:100%}label{line-height:2em;float:left;width:4%}input{background:#231f50;border:0;color:inherit;float:left;font:inherit;transition:.5s;outline:#231f50 solid 1px;padding:.25em .5em;width:96%}input:focus{outline:#3df5b8 solid 1px}input::-webkit-input-placeholder{color:inherit;font-style:italic}input::-moz-placeholder{color:inherit;font-style:italic}input::placeholder{color:inherit;font-style:italic}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="window">
+  <ul class="result">
+    <li class="ready">Ready…</li>
+  </ul>
+  
+  <div class="command-area">
+    <label for="command-input">$</label>
+    <input type="text" id="command-input" class="command" placeholder="type command here…" />
+  </div>
+</div>
+<script>
+	// set var and return input value
+function getInput() {
+  command = commandInput.value;
+  return command;
+}
+
+// construct the html+text of the input command
+function attachCommand() {
+  // the command you entered
+  var li = document.createElement('li');
+  li.textContent = getInput();
+  
+  // the path
+  var span = document.createElement('span');
+  span.className = 'path';
+  span.textContent = path;
+  
+  // attach path before command
+  li.insertBefore(span,li.firstChild);
+  
+  // and attach to window
+  result.appendChild(li);
+}
+
+// construct the html+text of the response
+function returnResponse() {
+  var li = document.createElement('li');
+  
+  // plain command vs starting with sudo
+  var answer = (getInput().indexOf('sudo') === 0) ? 'Ding Ding!! We have a winner! https://www.tombstone-squad.com/command-2/': '...';
+  li.textContent = answer;
+  
+  // and attach to window
+  result.appendChild(li);
+}
+
+// set input to last command on up key (see event listener below)
+function repeatInput() {
+  commandInput.value = command;
+}
+
+// scroll to bottom...
+function scrollToBottom() {
+  result.scrollTop = result.scrollHeight;
+}
+
+// run all functions on enter (see event listener below)
+function doTheThing() {
+  if(getInput().trim() !== '') { // trim whitespace and check if empty
+    attachCommand();
+    returnResponse();
+    scrollToBottom();
+  }
+  
+  commandInput.value = ''; // clear input value 
+}
+
+// var hoisting transports this to the top
+var commandInput = document.getElementById('command-input'),
+    result = document.querySelector('.result'),
+    command = '',
+    path = 'u:\\4r3$\\Up1t981#;\\> ';
+
+// whenever you press a key
+commandInput.addEventListener('keydown',function(e){
+  if(e.keyCode === 13) doTheThing(); // enter key
+  if(e.keyCode === 38) repeatInput(); // up key
+});
+</script>
+</body>
+</html>

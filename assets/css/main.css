@@ -1597,3 +1597,57 @@
 .tbs-yellow {
 	color: #f1c40f!important;
 }
+/* navbar */
+.navbar-inverse {
+	background-color: transparent;
+	border: 1px solid transparent;
+	right:0px;
+	top:0px;
+	border-radius: 0px;
+	position: fixed;
+	z-index: 80;
+	display: block;
+	list-style-type: none;
+	font-family:Khula;
+	transition: .3s;
+	border-bottom-left-radius: 2em;
+	padding-bottom: 1px;
+	padding-left: 1px;
+	-webkit-filter: drop-shadow(8px 8px 50px #222); /* Safari */
+    filter: drop-shadow(8px 8px 50px #222);
+}
+.navbar-inverse:hover {
+	padding-bottom: 3px;
+	padding-left: 3px;
+	-webkit-filter: drop-shadow(10px 10px 80px #151414); /* Safari */
+    filter: drop-shadow(10px 10px 80px #151414);
+}
+.btn-default {
+	border-radius: 0px;
+	border: none;
+	padding: 13px 25px;
+	border-bottom-left-radius: 2em;
+	color: #EF6480;
+	background-color: #FFFFFF
+}
+.btn-default:hover {
+	border-radius: 0px;
+	border: none;
+	padding: 13px 25px;
+	border-bottom-left-radius: 2em;
+	color: #EF6480;
+	background-color: #FFFFFF
+}
+ @media screen and (max-width: 799px) {
+.navbar-inverse {
+	background-position: 40px -16px;  
+	right:0px;
+	top:0px;
+	}
+}
+
+.navbar-inverse a {
+	color: #EF6480 !important;
+	border-bottom: none;
+}
+
