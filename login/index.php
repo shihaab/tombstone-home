@@ -64,7 +64,7 @@ $pdo = ConnectDB();
         if ($check){
             echo "U bent succesvol ingelogd";
             header('Refresh:5;url=https://tombstone-squad.com/');
-			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div>'
+			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div>';
         }
         else{
             echo "De Inlognaam of het paswoord is onjuist.";
