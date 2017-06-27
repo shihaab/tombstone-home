@@ -60,8 +60,8 @@ $pdo = ConnectDB();
         $wachtwoord = $_POST['Wachtwoord'];
 
 
-        $check = login($gebruikersnaam,$wachtwoord,$pdo);
-        if ($check){
+		$check = login($gebruikersnaam,$wachtwoord,$pdo);
+		if ($check){
 			header('Refresh:5;url=https://tombstone-squad.com');
 			echo '<h1 class="text-center" style="margin-top:50px;color:white;">Login successfull</h1>';
 			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div>';
@@ -69,10 +69,10 @@ $pdo = ConnectDB();
         else{
 			header('Refresh:5;url=https://tombstone-squad.com');
 			echo '<h1 class="text-center" style="margin-top:50px;color:white;">Username or password is incorrect</h1>';
-        }
+		}
 
-    }
-    else
+	}
+	else
     {
     ?><body>
         <div class="login">
