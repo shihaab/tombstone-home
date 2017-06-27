@@ -62,12 +62,12 @@ $pdo = ConnectDB();
 
         $check = login($gebruikersnaam,$wachtwoord,$pdo);
         if ($check){
-			header('Refresh:5;url=https://tombstone-squad.com/');
+			header('Refresh:5;url=https://tombstone-squad.com');
 			echo '<h1 class="text-center" style="margin-top:50px;color:white;">U bent succesvol ingelogd</h1>';
 			echo '<div id="loader"><div id="top"></div><div id="bottom"></div><div id="line"></div></div>';
         }
         else{
-			header('Refresh:5;url=https://tombstone-squad.com/');
+			header('Refresh:5;url=https://tombstone-squad.com');
 			echo '<h1 class="text-center" style="margin-top:50px;color:white;">De Inlognaam of het paswoord is onjuist.</h1>';
         }
 
